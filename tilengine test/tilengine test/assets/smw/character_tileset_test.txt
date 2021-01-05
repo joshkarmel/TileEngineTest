@@ -1,0 +1,16 @@
+IdleDown1,0,0,16,16
+IdleUp1,32,0,16,16
+IdleLeft1,48,0,16,16
+IdleRight1,16,0,16,16
+WalkingDown1,0,0,16,16
+WalkingDown2,0,16,16,16
+WalkingDown3,0,32,16,16
+WalkingUp1,32,0,16,16
+WalkingUp2,32,16,16,16
+WalkingUp3,32,32,16,16
+WalkingLeft1,48,0,16,16
+WalkingLeft2,48,16,16,16
+WalkingLeft3,48,32,16,16
+WalkingRight1,16,0,16,16
+WalkingRight2,16,16,16,16
+WalkingRight3,16,32,16,16
