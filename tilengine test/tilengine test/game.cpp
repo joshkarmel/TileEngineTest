@@ -48,7 +48,7 @@ void Game::gameLoop()
 		while (TLN_ProcessWindow())
 		{
 			
-			
+			//NOT PAUSED
 			if (!isPause)
 			{
 				if (!cuckie.getWalk())
@@ -84,9 +84,8 @@ void Game::gameLoop()
 					cuckie.checkAnimState();
 				}
 
+				//OFFSET CODE
 				if (cuckie.getWalk()) {
-					int xOffset = cuckie.getX() % aux.GRIDSIZE;
-					int yOffset = cuckie.getY() % aux.GRIDSIZE;
 					if (cuckie.getX() % aux.GRIDSIZE != 0 || cuckie.getY() % aux.GRIDSIZE != 0) {
 						cuckie.move(cuckie.getDir(), cuckie.getSpeed(), false);
 					}
@@ -94,17 +93,28 @@ void Game::gameLoop()
 						cuckie.setWalk(false);
 					}
 				}
-			}
+			}//IS PAUSED
 			else if (isPause)
 			{
-				if (TLN_GetInput(INPUT_UP))
+				//if (!mMarker.isMoving() && mMarker.getPixY() % aux.GRIDSIZE == 0)
+				//{
+					if (TLN_GetInput(INPUT_UP))
+					{
+						mMarker.moveMarker(true);
+					}
+					else if (TLN_GetInput(INPUT_DOWN))
+					{
+						mMarker.moveMarker(false);
+					}
+				//}
+				/*if (mMarker.getPixY() % aux.GRIDSIZE != 0)
 				{
-					mMarker.moveMarker(true);
+					mMarker.move();
 				}
-				 if (TLN_GetInput(INPUT_DOWN))
-				{
-					 mMarker.moveMarker(false);
-				}
+				else {
+					mMarker.isMarkerMoving = false;
+				}*/
+
 			}
 
 			if (TLN_GetInput(INPUT_BUTTON5))

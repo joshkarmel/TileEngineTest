@@ -1,6 +1,7 @@
-﻿  Marker.cpp
-C:\Users\MemeMachine\source\repos\tilengine test\tilengine test\Marker.cpp(22,31): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
-C:\Users\MemeMachine\source\repos\tilengine test\tilengine test\Marker.cpp(22,21): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
-C:\Users\MemeMachine\source\repos\tilengine test\tilengine test\Marker.cpp(25,37): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
-C:\Users\MemeMachine\source\repos\tilengine test\tilengine test\Marker.cpp(25,24): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
-  tilengine test.vcxproj -> C:\Users\MemeMachine\source\repos\tilengine test\x64\Debug\tilengine test.exe
+﻿  game.cpp
+  Marker.cpp
+e:\documents\tileenginetest\tileenginetest\tilengine test\tilengine test\marker.cpp(22): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
+e:\documents\tileenginetest\tileenginetest\tilengine test\tilengine test\marker.cpp(25): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
+e:\documents\tileenginetest\tileenginetest\tilengine test\tilengine test\marker.cpp(85): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+  Generating Code...
+  tilengine test.vcxproj -> E:\Documents\TileEngineTest\TileEngineTest\tilengine test\x64\Debug\tilengine test.exe

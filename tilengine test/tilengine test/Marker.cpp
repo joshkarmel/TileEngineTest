@@ -29,19 +29,62 @@ void Marker::toggleVis(bool pIsPause)
 
 void Marker::moveMarker(bool pUp)
 {
-	if (pUp == true && markerPos > 0)
-	{
+	moveDir = pUp;
+	isMarkerMoving = true;
+
+	if (moveDir && markerPos >= 0) {
 		markerPos--;
-		setPosition(x, y - 16);
 	}
-	if (pUp == false && markerPos < 5)
+	else if(!moveDir && markerPos < 5)
 	{
 		markerPos++;
-		setPosition(x, y + 16);
+	}
+
+	switch (markerPos) {
+		case 0:
+			setPosition(320, 16);
+			break;
+		case 1:
+			setPosition(320, 32);
+			break;
+		case 2:
+			setPosition(320, 48);
+			break;
+		case 3:
+			setPosition(320, 64);
+			break;
+		case 4:
+			setPosition(320, 80);
+			break;
+		default:
+			break;
+	}
+
+	//move();
+	std::cout << markerPos;
+}
+
+void Marker::move() 
+{
+	if (moveDir && markerPos >= 0)
+	{
+		setPosition(x, y - 1);
+	}
+	else if (!moveDir && markerPos < 5)
+	{
+		setPosition(x, y + 1);
 	}
 }
 
 void Marker::initAnims()
 {
 	Default = TLN_CreateSpriteSequence(NULL, spriteset, "Default", aux.DELAY);
+}
+
+int Marker::getPixY() {
+	return y;
+}
+
+bool Marker::isMoving() {
+	return isMarkerMoving;
 }
