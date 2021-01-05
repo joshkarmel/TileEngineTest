@@ -1,8 +1,8 @@
 #include "player.h"
 
-Player::Player(float posX, float posY, float sp, int pIndex)
+Player::Player(float posX, float posY, float pSpeed, int pIndex)
 	:
-	Actor(posX, posY, sp, pIndex),
+	Actor(posX, posY, pSpeed, pIndex),
 	isWalking(false),
 	Direction(CHDOWN)
 {
@@ -77,31 +77,30 @@ void Player::setDir(charDir pDir, bool release)
 	Direction = pDir;
 }
 
-void Player::move(charDir pDir, float distance, bool release)
+void Player::move(charDir pDir, float pDistance, bool release)
 {
 	switch (pDir)
 	{
 	case CHLEFT:
-		if(x >= 0)
-			x -= distance;
+		if (x >= 0)
+			x -= pDistance;
 		break;
 	case CHRIGHT:
 		if (x <= WIDTH - aux.GRIDSIZE)
-			x += distance;
+			x += pDistance;
 		break;
 	case CHUP:
 		if (y >= 0)
-			y -= distance;
+			y -= pDistance;
 		break;
 	case CHDOWN:
 		if (y < HEIGHT - aux.GRIDSIZE)
-			y += distance;
+			y += pDistance;
 		break;
 	default:
 		break;
 	}
 	TLN_SetSpritePosition(index, x, y);
-
 
 }
 
@@ -115,7 +114,8 @@ charDir Player::getDir()
 	return Direction;
 }
 
-void Player::checkAnimState() {
+void Player::checkAnimState() 
+{
 	if (!isWalking) {
 		switch (Direction)
 		{

@@ -1,9 +1,11 @@
 #pragma once
 
 #include "player.h"
+#include "Menu.h"
 #include <stdio.h>
 #include <SDL.h>
 #include <windows.h>
+#include "marker.h"
 #undef main
 
 
@@ -33,9 +35,11 @@ private:
 	TLN_Spriteset spriteset;
 	TLN_Tilemap foreground, background;
 	int spriteIndex = 0;
+
 	Aux aux;
 
 	SDL_Event event;
-	
+
+	bool isPause = false;
 };
 

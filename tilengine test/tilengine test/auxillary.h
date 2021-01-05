@@ -30,6 +30,18 @@ enum charDir
 	CHDOWN
 };
 
+typedef struct
+{
+	int x, y;
+}
+Vec2;
+
+typedef struct
+{
+	int x1, y1, x2, y2;
+}
+Rect;
+
 class Aux
 {
 public:

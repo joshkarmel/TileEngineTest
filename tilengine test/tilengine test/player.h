@@ -5,7 +5,7 @@
 class Player : public Actor
 {
 public:
-	Player(float posX, float posY, float sp, int pIndex);
+	Player(float posX, float posY, float pSpeed, int pIndex);
 	~Player();
 
 	void initAnims();
@@ -13,10 +13,9 @@ public:
 	void setWalk(bool pIsWalking);
 	bool getWalk();
 	void setDir(charDir pDir, bool release);
-	void move(charDir pDir, float distance, bool release);
+	void move(charDir pDir, float pDistance, bool release);
 	void setIdle();
 	void checkAnimState();
-
 
 	charDir getDir();
 private:
@@ -37,5 +36,4 @@ private:
 	charDir Direction;
 
 	float speed;
-	
 };

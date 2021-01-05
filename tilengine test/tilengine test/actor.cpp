@@ -1,17 +1,13 @@
 #include "actor.h"
 
-Actor::Actor(float posX, float posY, float sp, int pIndex)
+Actor::Actor(float posX, float posY, float pSpeed, int pIndex)
 	:
 	x(posX),
 	y(posY),
 	index(pIndex),
-	speed(sp)
+	speed(pSpeed)
 {
 	
-}
-
-Actor::Actor()
-{
 }
 
 Actor::~Actor()
@@ -19,25 +15,17 @@ Actor::~Actor()
 }
 
 void Actor::initSprite()
-{
-	
-	TLN_SetSpriteSet(0, spriteset);
+{	
+	TLN_SetSpriteSet(index, spriteset);
 	TLN_SetSpritePicture(0, 0);
-	TLN_SetSpritePosition(0, x, y);
-
-	
-}
-
-/*void Actor::move(const float pX, const float pY)
-{
-	x = x + pX;
-	y += pY;
 	TLN_SetSpritePosition(index, x, y);
-}*/
+}
 
 void Actor::setPosition(const float pX, const float pY)
 {
-	
+	x = pX;
+	y = pY;
+	TLN_SetSpritePosition(index, x, y);
 }
 
 void Actor::loadSprite(std::string str)
@@ -55,16 +43,18 @@ int Actor::getIndex()
 	return index;
 }
 
-int Actor::getX() {
+int Actor::getX() 
+{
 	return x;
 }
 
-int Actor::getY() {
+int Actor::getY() 
+{
 	return y;
 }
 
 
-float Actor::getSpeed() {
+float Actor::getSpeed() 
+{
 	return speed;
 }
-
