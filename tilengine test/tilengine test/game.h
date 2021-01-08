@@ -18,8 +18,6 @@ public:
 	void gameLoop();
 	void init();
 
-	bool inputtest();
-
 private:
 	float fgscale;
 	float bgscale;
@@ -43,18 +41,5 @@ private:
 	SDL_Event event;
 
 	bool isPause = false;
-
-	//input flags
-	bool leftPress = false;
-	bool leftPressOld = false;
-
-	bool rightPress = false;
-	bool rightPressOld = false;
-
-	bool upPress = false;
-	bool upPressOld = false;
-
-	bool downPress = false;
-	bool downPressOld = false;
 };
 

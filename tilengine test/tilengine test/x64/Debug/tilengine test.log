@@ -1,2 +1,7 @@
 ﻿  game.cpp
-  tilengine test.vcxproj -> E:\repo\TileEngineTest\tilengine test\x64\Debug\tilengine test.exe
+  Marker.cpp
+e:\documents\tileenginetest\tileenginetest\tilengine test\tilengine test\marker.cpp(22): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
+e:\documents\tileenginetest\tileenginetest\tilengine test\tilengine test\marker.cpp(25): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
+e:\documents\tileenginetest\tileenginetest\tilengine test\tilengine test\marker.cpp(85): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+  Generating Code...
+  tilengine test.vcxproj -> E:\Documents\TileEngineTest\TileEngineTest\tilengine test\x64\Debug\tilengine test.exe
