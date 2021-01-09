@@ -58,5 +58,6 @@ private:
 	bool downPressOld = false;
 
 	bool lockInput = false;
+	bool markerLock = false;
 };
 

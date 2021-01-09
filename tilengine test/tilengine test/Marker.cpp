@@ -59,9 +59,6 @@ void Marker::moveMarker(bool pUp)
 		default:
 			break;
 	}
-
-	//move();
-	std::cout << markerPos;
 }
 
 void Marker::move() 
