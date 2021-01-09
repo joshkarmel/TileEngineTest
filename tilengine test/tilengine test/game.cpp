@@ -45,14 +45,12 @@ void Game::gameLoop()
 	TLN_SetLayerPosition(LAYER_FOREGROUND, 0, 48);
 	TLN_SetLayerPosition(LAYER_BACKGROUND, 0, 80);
 
-	Player cuckie(0, 0, 0.5f, spriteIndex);
+	Player cuckie(16, 16, 1.0f, spriteIndex);
 	spriteIndex++;
 	Menu menu(spriteIndex);
 	spriteIndex++;
 	Marker mMarker(spriteIndex);
 	spriteIndex++;
-	bool downstate = false;
-	bool downstateold = false;
 
 	/* main loop */
 	TLN_CreateWindow(NULL, 0);
@@ -63,14 +61,10 @@ void Game::gameLoop()
 			//NOT PAUSED
 			if (!isPause)
 			{
-				if (!cuckie.getWalk())
-				{
-					
-					if (TLN_GetInput(INPUT_LEFT) && leftPressOld == false )
+					if (TLN_GetInput(INPUT_LEFT) && leftPressOld == false && lockInput == false)
 					{
-						cuckie.setWalk(true);
-						cuckie.setDir(CHLEFT, false);
-						cuckie.move(cuckie.getDir(), cuckie.getSpeed(), false);
+						lockInput = true;
+						cuckie.setDir(CHLEFT);
 						leftPress = true;
 						
 					}
@@ -79,13 +73,19 @@ void Game::gameLoop()
 						leftPress = false;
 					}
 					leftPressOld = leftPress;
-
-
-					if (TLN_GetInput(INPUT_RIGHT) && rightPressOld == false)
+					if (leftPress)
 					{
-						cuckie.setWalk(true);
-						cuckie.setDir(CHRIGHT, false);
-						cuckie.move(cuckie.getDir(), cuckie.getSpeed(), false);
+						if (!cuckie.getWalk())
+						{
+							cuckie.setWalk(true);
+							cuckie.move(CHLEFT);
+						}
+					}
+
+					if (TLN_GetInput(INPUT_RIGHT) && rightPressOld == false && lockInput == false)
+					{
+						lockInput = true;
+						cuckie.setDir(CHRIGHT);
 						rightPress = true;
 					}
 					else if (!TLN_GetInput(INPUT_RIGHT) && rightPressOld == true)
@@ -93,12 +93,20 @@ void Game::gameLoop()
 						rightPress = false;
 					}
 					rightPressOld = rightPress;
-
-					if (TLN_GetInput(INPUT_UP) && upPressOld == false)
+					if (rightPress)
 					{
-						cuckie.setWalk(true);
-						cuckie.setDir(CHUP, false);
-						cuckie.move(cuckie.getDir(), cuckie.getSpeed(), false);
+						if (!cuckie.getWalk())
+						{
+							cuckie.setWalk(true);
+							cuckie.move(CHRIGHT);
+						}
+					}
+
+
+					if (TLN_GetInput(INPUT_UP) && upPressOld == false && lockInput == false)
+					{
+						lockInput = true;
+						cuckie.setDir(CHUP);
 						upPress = true;
 					}
 					else if (!TLN_GetInput(INPUT_UP) && upPressOld == true)
@@ -106,32 +114,53 @@ void Game::gameLoop()
 						upPress = false;
 					}
 					upPressOld = upPress;
-
-					if (TLN_GetInput(INPUT_DOWN) && downPressOld == false)
+					if (upPress)
 					{
-						cuckie.setWalk(true);
-						cuckie.setDir(CHDOWN, false);
-						cuckie.move(cuckie.getDir(), cuckie.getSpeed(), false);
-						upPress = true;
+						if (!cuckie.getWalk())
+						{
+							cuckie.setWalk(true);
+							cuckie.move(CHUP);
+						}
+					}
+
+
+					if (TLN_GetInput(INPUT_DOWN) && downPressOld == false && lockInput == false)
+					{
+						lockInput = true;
+						cuckie.setDir(CHDOWN);
+						downPress = true;
 					}
 					else if (!TLN_GetInput(INPUT_DOWN) && downPressOld == true)
 					{
 						downPress = false;
 					}
 					downPressOld = downPress;
-
+					if (downPress)
+					{
+						if (!cuckie.getWalk())
+						{
+							cuckie.setWalk(true);
+							cuckie.move(CHDOWN);
+						}
+					}
 					cuckie.checkAnimState();
-				}
+					std::cout << lockInput;
 
 				//OFFSET CODE
 				if (cuckie.getWalk()) {
 					if (cuckie.getX() % aux.GRIDSIZE != 0 || cuckie.getY() % aux.GRIDSIZE != 0) {
-						cuckie.move(cuckie.getDir(), cuckie.getSpeed(), false);
+						cuckie.move(cuckie.getDir());
 					}
 					else {
 						cuckie.setWalk(false);
+						if (!leftPress && !rightPress && !upPress && !downPress)
+						{
+							lockInput = false;
+						}
+						
 					}
 				}
+				
 			}//IS PAUSED
 			else if (isPause)
 			{
@@ -154,6 +183,7 @@ void Game::gameLoop()
 					cuckie.checkAnimState();
 					menu.toggleMenu(isPause);
 					mMarker.toggleVis(isPause);
+					lockInput = false;
 				}
 			}
 			if (TLN_GetInput(INPUT_B))

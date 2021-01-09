@@ -12,10 +12,12 @@ public:
 	void setAnim(animStates animKey);
 	void setWalk(bool pIsWalking);
 	bool getWalk();
-	void setDir(charDir pDir, bool release);
-	void move(charDir pDir, float pDistance, bool release);
+	void setDir(charDir pDir);
+	void move(charDir pDir);
 	void setIdle();
 	void checkAnimState();
+
+	void checkPos();
 
 	charDir getDir();
 private:
@@ -34,6 +36,4 @@ private:
 	bool isWalking;
 
 	charDir Direction;
-
-	float speed;
 };

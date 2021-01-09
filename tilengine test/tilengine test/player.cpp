@@ -72,14 +72,14 @@ bool Player::getWalk()
 	return isWalking;
 }
 
-void Player::setDir(charDir pDir, bool release)
+void Player::setDir(charDir pDir)
 {
 	Direction = pDir;
 }
 
-void Player::move(charDir pDir, float pDistance, bool release)
+void Player::move(charDir pDir)
 {
-	switch (pDir)
+	/*switch (pDir)
 	{
 	case CHLEFT:
 		if (x >= 0)
@@ -94,12 +94,37 @@ void Player::move(charDir pDir, float pDistance, bool release)
 			y -= pDistance;
 		break;
 	case CHDOWN:
-		if (y < HEIGHT - aux.GRIDSIZE)
+		if (y < HEIGHT - aux.GRIDSIZE)8
 			y += pDistance;
-		break;
+		break;8
 	default:
 		break;
+	}*/
+	Direction = pDir;
+
+	switch (Direction)
+	{
+	case CHLEFT:
+
+		x -= speed;
+		break;
+	case CHRIGHT:
+
+		x += speed;
+		break;
+	case CHUP:
+		
+			y -= speed;
+		break;
+	case CHDOWN:
+		
+			y += speed;
+		break;
+	default:
+		std::cout << "cplayer move default";
+		break;
 	}
+	
 	TLN_SetSpritePosition(index, x, y);
 
 }
@@ -139,4 +164,20 @@ void Player::checkAnimState()
 	else {
 		setAnim(aux.charDirtoAnim(Direction));
 	}
+}
+
+void Player::checkPos()
+{
+	
+	if ((static_cast<int>(x) % aux.GRIDSIZE != 0))
+	{
+		move(Direction);
+		std::cout << "e";
+	}
+	//else if (isWalking && (static_cast<int>(x) % aux.GRIDSIZE == 0))
+	//{
+	//	move(Direction);
+	//}
+	//isWalking = false;
+
 }

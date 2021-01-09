@@ -56,5 +56,7 @@ private:
 
 	bool downPress = false;
 	bool downPressOld = false;
+
+	bool lockInput = false;
 };
 
