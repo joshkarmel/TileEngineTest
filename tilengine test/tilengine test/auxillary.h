@@ -2,8 +2,6 @@
 #include <string>
 #include <vector>
 
-
-
 #define WIDTH	400 //25
 #define HEIGHT	240 //15
 

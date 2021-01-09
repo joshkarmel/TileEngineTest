@@ -17,8 +17,6 @@ public:
 	void setIdle();
 	void checkAnimState();
 
-	void checkPos();
-
 	charDir getDir();
 private:
 	TLN_Sequence WalkingDown;

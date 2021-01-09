@@ -1,2 +1,28 @@
-﻿  game.cpp
+﻿  Marker.cpp
+E:\repo\TileEngineTest\tilengine test\tilengine test\Marker.cpp(22,31): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
+E:\repo\TileEngineTest\tilengine test\tilengine test\Marker.cpp(22,21): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
+E:\repo\TileEngineTest\tilengine test\tilengine test\Marker.cpp(25,37): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
+E:\repo\TileEngineTest\tilengine test\tilengine test\Marker.cpp(25,24): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
+E:\repo\TileEngineTest\tilengine test\tilengine test\Marker.cpp(85,9): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+  Menu.cpp
+E:\repo\TileEngineTest\tilengine test\tilengine test\Menu.cpp(11,34): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+E:\repo\TileEngineTest\tilengine test\tilengine test\Menu.cpp(11,31): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+E:\repo\TileEngineTest\tilengine test\tilengine test\Menu.cpp(24,31): warning C4244: 'argument': conversion from 'const int' to 'const float', possible loss of data
+E:\repo\TileEngineTest\tilengine test\tilengine test\Menu.cpp(24,21): warning C4244: 'argument': conversion from 'const int' to 'const float', possible loss of data
+E:\repo\TileEngineTest\tilengine test\tilengine test\Menu.cpp(27,37): warning C4244: 'argument': conversion from 'const int' to 'const float', possible loss of data
+E:\repo\TileEngineTest\tilengine test\tilengine test\Menu.cpp(27,24): warning C4244: 'argument': conversion from 'const int' to 'const float', possible loss of data
+  actor.cpp
+E:\repo\TileEngineTest\tilengine test\tilengine test\actor.cpp(21,34): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+E:\repo\TileEngineTest\tilengine test\tilengine test\actor.cpp(21,31): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+E:\repo\TileEngineTest\tilengine test\tilengine test\actor.cpp(28,34): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+E:\repo\TileEngineTest\tilengine test\tilengine test\actor.cpp(28,31): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+E:\repo\TileEngineTest\tilengine test\tilengine test\actor.cpp(48,9): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+E:\repo\TileEngineTest\tilengine test\tilengine test\actor.cpp(53,9): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+  entry.cpp
+  game.cpp
+  player.cpp
+E:\repo\TileEngineTest\tilengine test\tilengine test\player.cpp(107,34): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+E:\repo\TileEngineTest\tilengine test\tilengine test\player.cpp(107,31): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  Generating Code...
+E:\repo\TileEngineTest\tilengine test\tilengine test\auxillary.h(66): warning C4715: 'Aux::charDirtoAnim': not all control paths return a value
   tilengine test.vcxproj -> E:\repo\TileEngineTest\tilengine test\x64\Debug\tilengine test.exe

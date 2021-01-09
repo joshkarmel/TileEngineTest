@@ -22,7 +22,5 @@ private:
 	Vec2 VisPos{ 320,16 };
 	TLN_Sequence Default;
 	bool moveDir = false;//t=up, f=down
-	
-
 };
 

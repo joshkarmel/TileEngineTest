@@ -8,10 +8,7 @@ Menu::Menu(int index)
 	initSprite();
 	initAnims();
 
-	//loadSprite("menu_box_tileset");
 	TLN_SetSpritePosition(index, x, y);
-
-	
 }
 
 Menu::~Menu()
