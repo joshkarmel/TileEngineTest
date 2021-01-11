@@ -4,7 +4,7 @@ Menu::Menu(int index)
 	:
 	Actor(-128,-128, 0, index)
 {
-	loadSprite("menu_tileset");
+	loadSprite("menu_blank");
 	initSprite();
 	initAnims();
 

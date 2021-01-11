@@ -42,20 +42,22 @@ void Marker::moveMarker(bool pUp)
 
 	switch (markerPos) {
 		case 0:
-			setPosition(320, 16);
+			setPosition(menuPos0.x, menuPos0.y);
 			break;
 		case 1:
-			setPosition(320, 32);
+			setPosition(menuPos1.x, menuPos1.y);
 			break;
 		case 2:
-			setPosition(320, 48);
+			setPosition(menuPos2.x, menuPos2.y);
 			break;
 		case 3:
-			setPosition(320, 64);
+			setPosition(menuPos3.x, menuPos3.y);
 			break;
 		case 4:
-			setPosition(320, 80);
+			setPosition(menuPos4.x, menuPos4.y);
 			break;
+		case 5:
+			setPosition(menuPos5.x, menuPos5.y);
 		default:
 			break;
 	}

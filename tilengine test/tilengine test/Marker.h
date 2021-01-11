@@ -22,5 +22,12 @@ private:
 	Vec2 VisPos{ 320,16 };
 	TLN_Sequence Default;
 	bool moveDir = false;//t=up, f=down
+
+	const Vec2 menuPos0 = { 320, 16 };
+	const Vec2 menuPos1 = { 320, 32 };
+	const Vec2 menuPos2 = { 320, 48 };
+	const Vec2 menuPos3 = { 320, 64 };
+	const Vec2 menuPos4 = { 320, 80 };
+	const Vec2 menuPos5 = { 320, 96 };
 };
 

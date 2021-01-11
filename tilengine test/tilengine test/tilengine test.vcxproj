@@ -144,6 +144,8 @@
     <ClCompile Include="actor.cpp" />
     <ClCompile Include="entry.cpp" />
     <ClCompile Include="game.cpp" />
+    <ClCompile Include="Item.cpp" />
+    <ClCompile Include="Map.cpp" />
     <ClCompile Include="Marker.cpp" />
     <ClCompile Include="Menu.cpp" />
     <ClCompile Include="player.cpp" />
@@ -152,6 +154,8 @@
     <ClInclude Include="actor.h" />
     <ClInclude Include="auxillary.h" />
     <ClInclude Include="game.h" />
+    <ClInclude Include="Item.h" />
+    <ClInclude Include="Map.h" />
     <ClInclude Include="Marker.h" />
     <ClInclude Include="Menu.h" />
     <ClInclude Include="player.h" />

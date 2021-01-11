@@ -6,6 +6,7 @@
 #include <SDL.h>
 #include <windows.h>
 #include "marker.h"
+#include "Map.h"
 #undef main
 
 
@@ -27,12 +28,7 @@ private:
 	int maxy;
 	int scale;
 
-	enum
-	{
-		LAYER_FOREGROUND,
-		LAYER_BACKGROUND,
-		MAX_LAYER
-	};
+	
 	
 	TLN_Spriteset spriteset;
 	TLN_Tilemap foreground, background;

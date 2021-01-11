@@ -25,4 +25,6 @@ private:
 
 	const Vec2 HiddenPos = { -128, -128 };
 	const Vec2 VisPos = { 320, 16 };
+
+	
 };

@@ -1,9 +1,6 @@
 #pragma once
-#include "Tilengine.h"
-#include <string>
 #include "auxillary.h"
 #include <map>
-#include <iostream>
 
 
 

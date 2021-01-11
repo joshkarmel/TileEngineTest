@@ -3,10 +3,10 @@
 void Game::init()
 {
 	/* basic setup */
-	TLN_Init(WIDTH, HEIGHT, MAX_LAYER, 50, 0);
+	TLN_Init(WIDTH, HEIGHT, 2, 50, 0);
 	TLN_SetBGColor(0, 96, 184);
 	TLN_SetLoadPath("assets/smw");
-	foreground = TLN_LoadTilemap("test2.tmx", NULL);
+	//foreground = TLN_LoadTilemap("test2.tmx", NULL);
 
 	TLN_DefineInputKey(PLAYER1, INPUT_BUTTON5, SDLK_p);
 }
@@ -32,18 +32,13 @@ Game::~Game()
 {
 	/* deinit */
 	TLN_DeleteTilemap(foreground);
-	TLN_DeleteTilemap(background);
+	
 	TLN_Deinit();
 }
 
 
 void Game::gameLoop()
 {
-	/* load resources */
-	TLN_SetLayerTilemap(LAYER_FOREGROUND, foreground);
-	TLN_SetLayerTilemap(LAYER_BACKGROUND, background);
-	TLN_SetLayerPosition(LAYER_FOREGROUND, 0, 48);
-	TLN_SetLayerPosition(LAYER_BACKGROUND, 0, 80);
 
 	Player cuckie(16, 16, 1.0f, spriteIndex);
 	spriteIndex++;
@@ -51,6 +46,9 @@ void Game::gameLoop()
 	spriteIndex++;
 	Marker mMarker(spriteIndex);
 	spriteIndex++;
+
+
+	Map oMap("test2.tmx");
 
 	/* main loop */
 	TLN_CreateWindow(NULL, 0);
@@ -159,6 +157,7 @@ void Game::gameLoop()
 						if (!leftPress && !rightPress && !upPress && !downPress)
 						{
 							lockInput = false;
+							cuckie.checkAnimState();
 						}
 						
 					}

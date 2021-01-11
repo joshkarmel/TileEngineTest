@@ -1,6 +1,8 @@
 #pragma once
 #include <string>
 #include <vector>
+#include "Tilengine.h"
+#include <iostream>
 
 #define WIDTH	400 //25
 #define HEIGHT	240 //15
@@ -70,6 +72,8 @@ public:
 	}
 	const int GRIDSIZE = 16;
 	const int DELAY = 12;
+
+	const int NSTACK = 99;
 
 };
 
