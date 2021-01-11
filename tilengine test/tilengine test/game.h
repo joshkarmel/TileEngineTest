@@ -19,24 +19,18 @@ public:
 	void gameLoop();
 	void init();
 
-	bool inputtest();
-
 private:
 	float fgscale;
 	float bgscale;
 	int bgypos;
 	int maxy;
 	int scale;
-
-	
 	
 	TLN_Spriteset spriteset;
 	TLN_Tilemap foreground, background;
 	int spriteIndex = 0;
 
 	Aux aux;
-
-	SDL_Event event;
 
 	bool isPause = false;
 

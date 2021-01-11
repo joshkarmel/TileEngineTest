@@ -18,10 +18,11 @@ public:
 
 private:
 
-	Vec2 HiddenPos{ -128, -128 };
-	Vec2 VisPos{ 320,16 };
+	
 	TLN_Sequence Default;
 	bool moveDir = false;//t=up, f=down
+
+	const Vec2 HiddenPos{ -128, -128 };
 
 	const Vec2 menuPos0 = { 320, 16 };
 	const Vec2 menuPos1 = { 320, 32 };

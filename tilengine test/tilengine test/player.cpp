@@ -25,6 +25,7 @@ void Player::initAnims()
 	IdleLeft = TLN_CreateSpriteSequence(NULL, spriteset, "IdleLeft", aux.DELAY);
 	WalkingRight = TLN_CreateSpriteSequence(NULL, spriteset, "WalkingRight", aux.DELAY);
 	IdleRight = TLN_CreateSpriteSequence(NULL, spriteset, "IdleRight", aux.DELAY);
+
 	TLN_SetSpriteAnimation(0, IdleDown, 0);
 }
 

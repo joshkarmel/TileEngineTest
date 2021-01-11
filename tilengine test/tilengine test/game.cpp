@@ -11,18 +11,6 @@ void Game::init()
 	TLN_DefineInputKey(PLAYER1, INPUT_BUTTON5, SDLK_p);
 }
 
-bool Game::inputtest()
-{
-	if (TLN_GetInput(INPUT_LEFT))
-	{
-		return true;
-	}
-	else
-	{
-		return false;
-	}
-}
-
 Game::Game()
 {
 	init();

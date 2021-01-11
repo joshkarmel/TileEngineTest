@@ -19,7 +19,7 @@ void Marker::toggleVis(bool pIsPause)
 	switch (pIsPause)
 	{
 	case true:
-		setPosition(VisPos.x, VisPos.y);
+		setPosition(menuPos0.x, menuPos0.y);
 		break;
 	case false:
 		setPosition(HiddenPos.x, HiddenPos.y);
