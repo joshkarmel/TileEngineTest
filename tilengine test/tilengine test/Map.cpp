@@ -14,6 +14,8 @@ Map::~Map()
 
 void Map::loadTilemap(std::string str)
 {
+	TLN_SetLoadPath("assets/smw/level");
+
 	char* writable = new char[str.size() + 1];
 	std::copy(str.begin(), str.end(), writable);
 	writable[str.size()] = '\0'; 

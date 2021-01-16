@@ -1,5 +1,2 @@
-﻿  player.cpp
-E:\repo\TileEngineTest\tilengine test\tilengine test\player.cpp(108,34): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-E:\repo\TileEngineTest\tilengine test\tilengine test\player.cpp(108,31): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-E:\repo\TileEngineTest\tilengine test\tilengine test\auxillary.h(68): warning C4715: 'Aux::charDirtoAnim': not all control paths return a value
+﻿  Map.cpp
   tilengine test.vcxproj -> E:\repo\TileEngineTest\tilengine test\x64\Debug\tilengine test.exe

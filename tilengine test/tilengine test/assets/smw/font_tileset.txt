@@ -1,0 +1,4 @@
+LetterA1,0,0,16,16
+Lettera1,16,0,32,16
+LetterB1,32,0,48,16
+Letterb1,48,0,64,16
