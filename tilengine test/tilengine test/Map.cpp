@@ -16,14 +16,8 @@ void Map::loadTilemap(std::string str)
 {
 	TLN_SetLoadPath("assets/smw/level");
 
-	char* writable = new char[str.size() + 1];
-	std::copy(str.begin(), str.end(), writable);
-	writable[str.size()] = '\0'; 
+	background = TLN_LoadTilemap(aux.stringToCharArray(str), NULL);
 	
-	background = TLN_LoadTilemap(writable, NULL);
-	
-	delete[] writable;
-
 	//TLN_SetLayerTilemap(LAYER_FOREGROUND, foreground);
 	TLN_SetLayerTilemap(LAYER_BACKGROUND, background);
 	//TLN_SetLayerPosition(LAYER_FOREGROUND, 0, 48);

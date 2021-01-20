@@ -2,3 +2,13 @@ LetterA1,0,0,16,16
 Lettera1,16,0,32,16
 LetterB1,32,0,48,16
 Letterb1,48,0,64,16
+LetterC1,64,0,80,16
+Letterc1,80,0,96,16
+LetterD1,96,0,112,16
+Letterd1,112,0,128,16
+LetterE1,128,0,144,16
+Lettere1,144,0,160,16
+LetterF1,16,16,32,32
+Letterf1,32,16,48,32
+LetterG1,48,16,64,32
+Letterg1,64,16,80,32

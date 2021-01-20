@@ -18,13 +18,19 @@ Letter::~Letter()
 
 void Letter::initAnims()
 {
-	
 	letterSprite = TLN_CreateSpriteSequence(NULL, spriteset, "LetterA", aux.DELAY);
-	//letterSprite[0] = temp;
 }
 
 void Letter::setLetterAnim()
 {
 	
 	TLN_SetSpriteAnimation(index, letterSprite, 0);
+}
+
+void Letter::createSequence(char pLetter)
+{
+	std::string temp = "Letter";
+	temp += pLetter;
+	std::cout << pLetter;
+	letterSprite = TLN_CreateSpriteSequence(NULL, spriteset, aux.stringToCharArray(temp), aux.DELAY);
 }

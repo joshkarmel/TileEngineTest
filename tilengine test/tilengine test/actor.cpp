@@ -30,12 +30,7 @@ void Actor::setPosition(const float pX, const float pY)
 
 void Actor::loadSprite(std::string str)
 {
-	char* writable = new char[str.size() + 1];
-	std::copy(str.begin(), str.end(), writable);
-	writable[str.size()] = '\0'; // don't forget the terminating 0
-
-	spriteset = TLN_LoadSpriteset(writable);
-	delete[] writable;
+	spriteset = TLN_LoadSpriteset(aux.stringToCharArray(str));
 }
 
 int Actor::getIndex()

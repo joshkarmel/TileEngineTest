@@ -66,10 +66,26 @@ public:
 			break;
 		}
 	}
+	char* stringToCharArray(std::string pString)
+	{
+		char* writable = new char[pString.size() + 1];
+		std::copy(pString.begin(), pString.end(), writable);
+		writable[pString.size()] = '\0';
+
+		return writable;
+		delete[] writable;
+	}
+	char getLetterAtLoc(std::string pString, uint8_t pLoc)
+	{
+		char temp = pString[pLoc];
+		return temp;
+	}
 	static int lerp(int x, int x0, int x1, int fx0, int fx1)
 	{
 		return (fx0)+((fx1)-(fx0)) * ((x)-(x0)) / ((x1)-(x0));
 	}
+
+
 	const int GRIDSIZE = 16;
 	const int DELAY = 12;
 

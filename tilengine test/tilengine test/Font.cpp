@@ -5,7 +5,7 @@ Font::Font(std::string pTextString)
 	textString(pTextString)
 {
 	//textString = "A";
-	createLine("AAA");
+	createLine(pTextString);
 }
 
 Font::~Font()
@@ -17,14 +17,14 @@ void Font::createLine(std::string pLine)
 	letters.clear();
 	
 	int tempCount = pLine.length();
-	std::cout << tempCount;
+	
 
 	for (int i = 0; i < tempCount; i++)
 	{
-		letters.push_back(Letter(16 * i, 0, i + 10, 'A'));
-		letters[i].setPosition(stringX + 16, stringY);
-
-		std::cout << letters.size();
+		stringX = 16 * (i + 1);
+		letters.push_back(Letter(stringX, 0, i + 10, 'A'));
+		letters[i].setPosition(stringX, stringY);
+		letters[i].createSequence(aux.getLetterAtLoc(textString, i));
 	}
 
 	

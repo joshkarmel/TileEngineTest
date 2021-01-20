@@ -8,6 +8,7 @@ public:
 
 	void initAnims();
 	void setLetterAnim();
+	void createSequence(char pLetter);
 private:
 	char letter;
 

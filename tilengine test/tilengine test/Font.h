@@ -10,7 +10,7 @@ public:
 private:
 	
 	std::string textString;
-
+	Aux aux;
 	std::vector<Letter> letters;
 
 	int stringX = 16;

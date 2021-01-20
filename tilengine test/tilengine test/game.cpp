@@ -35,7 +35,7 @@ void Game::gameLoop()
 	Marker mMarker(spriteIndex);
 	spriteIndex++;
 
-	Font font("AAA");
+	Font font("CacBab");
 
 
 	Map oMap("test2.tmx");

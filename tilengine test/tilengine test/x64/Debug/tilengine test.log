@@ -1,6 +1,8 @@
 ﻿  Font.cpp
 E:\repo\TileEngineTest\tilengine test\tilengine test\Font.cpp(19,32): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-E:\repo\TileEngineTest\tilengine test\tilengine test\Font.cpp(24,31): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-E:\repo\TileEngineTest\tilengine test\tilengine test\Font.cpp(25,40): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
-E:\repo\TileEngineTest\tilengine test\tilengine test\Font.cpp(25,34): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
+E:\repo\TileEngineTest\tilengine test\tilengine test\Font.cpp(25,28): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+E:\repo\TileEngineTest\tilengine test\tilengine test\Font.cpp(26,35): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
+E:\repo\TileEngineTest\tilengine test\tilengine test\Font.cpp(26,26): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
+  Letter.cpp
+  Generating Code...
   tilengine test.vcxproj -> E:\repo\TileEngineTest\tilengine test\x64\Debug\tilengine test.exe

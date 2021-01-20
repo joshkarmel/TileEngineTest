@@ -10,7 +10,7 @@ public:
 private:
 	TLN_Tilemap background;
 	std::string tilemapName;
-
+	Aux aux;
 	enum
 	{
 		LAYER_FOREGROUND,
