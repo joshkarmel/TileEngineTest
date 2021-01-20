@@ -35,6 +35,8 @@ void Game::gameLoop()
 	Marker mMarker(spriteIndex);
 	spriteIndex++;
 
+	Font font("AAA");
+
 
 	Map oMap("test2.tmx");
 
@@ -44,6 +46,7 @@ void Game::gameLoop()
 
 		while (TLN_ProcessWindow())
 		{
+			
 			//NOT PAUSED
 			if (!isPause)
 			{
@@ -133,7 +136,7 @@ void Game::gameLoop()
 						}
 					}
 					
-					std::cout << lockInput;
+					//std::cout << lockInput;
 
 				//OFFSET CODE
 				if (cuckie.getWalk()) {
@@ -159,6 +162,7 @@ void Game::gameLoop()
 					{
 						mMarker.moveMarker(true);
 						upPress = true;
+
 					}
 					else if (!TLN_GetInput(INPUT_UP) && upPressOld == true)
 					{
@@ -189,6 +193,7 @@ void Game::gameLoop()
 					menu.toggleMenu(isPause);
 					mMarker.toggleVis(isPause);
 					lockInput = false;
+					//font.createLine("AAA");
 
 					upPress = false;
 					downPress = false;

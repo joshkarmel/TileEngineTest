@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -143,8 +143,10 @@
   <ItemGroup>
     <ClCompile Include="actor.cpp" />
     <ClCompile Include="entry.cpp" />
+    <ClCompile Include="Font.cpp" />
     <ClCompile Include="game.cpp" />
     <ClCompile Include="Item.cpp" />
+    <ClCompile Include="Letter.cpp" />
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="Marker.cpp" />
     <ClCompile Include="Menu.cpp" />
@@ -153,8 +155,10 @@
   <ItemGroup>
     <ClInclude Include="actor.h" />
     <ClInclude Include="auxillary.h" />
+    <ClInclude Include="Font.h" />
     <ClInclude Include="game.h" />
     <ClInclude Include="Item.h" />
+    <ClInclude Include="Letter.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="Marker.h" />
     <ClInclude Include="Menu.h" />
