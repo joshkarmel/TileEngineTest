@@ -33,4 +33,5 @@ void Letter::createSequence(char pLetter)
 	temp += pLetter;
 	std::cout << pLetter;
 	letterSprite = TLN_CreateSpriteSequence(NULL, spriteset, aux.stringToCharArray(temp), aux.DELAY);
+	setLetterAnim();
 }
