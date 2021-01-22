@@ -36,3 +36,4 @@
 *.ipch
 *.opendb
 *.sln
+*.vcxproj
